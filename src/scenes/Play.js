@@ -14,7 +14,7 @@ class Play extends Phaser.Scene {
         this.load.image('UI', './assets/UI.png');
         // load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {
-            frameWidth: 64,
+            frameWidth: 32,
             frameHeight: 32,
             startFrame: 0,
             endFrame: 9
@@ -45,11 +45,11 @@ class Play extends Phaser.Scene {
 
         // add spaceship (x3)
         this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4,
-             'spaceship', 0, 30).setOrigin(0,0);
+             'spaceship1', 0, 30, 1).setOrigin(0,0);
         this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + 
-            borderPadding*2, 'spaceship', 0, 20).setOrigin(0,0);
+            borderPadding*2, 'spaceship2', 0, 20, 1.25).setOrigin(0,0);
         this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 
-            'spaceship', 0, 30).setOrigin(0,0);
+            'spaceship3', 0, 10, 1.5).setOrigin(0,0);
 
         // Define our keys
         keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
@@ -61,11 +61,7 @@ class Play extends Phaser.Scene {
         // animation config
         this.anims.create({
             key: 'explode', 
-            frames: this.anims.generateFrameNumbers('explosion', {
-                start: 0,
-                end: 0,
-                first:0
-            }),
+            frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 0, first: 0 }),
             frameRate: 30
         });
 
