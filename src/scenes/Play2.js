@@ -148,36 +148,46 @@ class Play2 extends Phaser.Scene {
             this.ship04.update(Phaser.Math.Between(borderUISize*4, borderUISize*6 + borderPadding*4));
         }
 
+        // Check Collision for First Player
         if (this.checkCollision(this.p1Rocket, this.ship03)) {
+            this.clock.elapsed -= 2000;
             this.p1Rocket.reset();
             this.shipExplode(this.ship03, (borderUISize*6 + borderPadding*4));
         }
         if (this.checkCollision(this.p1Rocket, this.ship02)) {
+            this.clock.elapsed -= 2000;
             this.p1Rocket.reset();
             this.shipExplode(this.ship02, (borderUISize*5 + borderPadding*2));
         }
         if (this.checkCollision(this.p1Rocket, this.ship01)) {
+            this.clock.elapsed -= 2000;
             this.p1Rocket.reset();
             this.shipExplode(this.ship01, (borderUISize*4));
         }
         if (this.checkCollision(this.p1Rocket, this.ship04)) {
+            this.clock.elapsed -= 3000;
             this.p1Rocket.reset();
             this.shipExplode(this.ship04, (Phaser.Math.Between(borderUISize*4, borderUISize*6 + borderPadding*4)));
         }
 
+        // Check Collision for Second Player
         if (this.checkCollision(this.p2Rocket, this.ship03)) {
+            this.clock.elapsed -= 2000;
             this.p2Rocket.reset();
             this.shipExplode(this.ship03, (borderUISize*6 + borderPadding*4));
         }
         if (this.checkCollision(this.p2Rocket, this.ship02)) {
+            this.clock.elapsed -= 2000;
             this.p2Rocket.reset();
             this.shipExplode(this.ship02, (borderUISize*5 + borderPadding*2));
         }
         if (this.checkCollision(this.p2Rocket, this.ship01)) {
+            this.clock.elapsed -= 2000;
             this.p2Rocket.reset();
             this.shipExplode(this.ship01, (borderUISize*4));
         }
         if (this.checkCollision(this.p2Rocket, this.ship04)) {
+            this.clock.elapsed -= 2000;
             this.p2Rocket.reset();
             this.shipExplode(this.ship04, (Phaser.Math.Between(borderUISize*4, borderUISize*6 + borderPadding*4)));
         }

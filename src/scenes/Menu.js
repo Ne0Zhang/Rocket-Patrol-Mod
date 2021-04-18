@@ -28,7 +28,7 @@ class Menu extends Phaser.Scene {
             // single mode
             game.settings = {
                 spaceshipSpeed: 3,
-                gameTimer: 45000    
+                gameTimer: 25000    
             }
             this.sound.play('sfx_select');
             this.scene.start('playScene');    
@@ -37,7 +37,7 @@ class Menu extends Phaser.Scene {
             // co-op mode
             game.settings = {
                 spaceshipSpeed: 3,
-                gameTimer: 45000    
+                gameTimer: 15000    
             }
             this.sound.play('sfx_select');
             this.scene.start('playScene2');    
