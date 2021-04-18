@@ -10,7 +10,7 @@ class Play2 extends Phaser.Scene {
         this.load.image('spaceship1', './assets/spaceship10.png');
         this.load.image('spaceship2', './assets/spaceship20.png');
         this.load.image('spaceship3', './assets/spaceship30.png');
-        this.load.image('spaceship4', './assets/spaceship50.png');
+        this.load.image('spaceship4', './assets/spaceship80.png');
         this.load.image('starfield', './assets/starfield.png');
         this.load.image('planet', './assets/starfield1.png');
         this.load.image('UI', './assets/UI.png');
@@ -55,7 +55,7 @@ class Play2 extends Phaser.Scene {
         this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 
             'spaceship3', 0, 10, 1.5).setOrigin(0,0);
         this.ship04 = new Spaceship(this, game.config.width, Phaser.Math.Between(borderUISize*4, borderUISize*6 + borderPadding*4), 
-            'spaceship4', 0, 80, 5).setOrigin(0,0);
+            'spaceship4', 0, 80, 6.5).setOrigin(0,0);
 
         // Define our keys
         keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
