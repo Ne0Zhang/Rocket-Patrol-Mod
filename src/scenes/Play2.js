@@ -150,22 +150,22 @@ class Play2 extends Phaser.Scene {
 
         // Check Collision for First Player
         if (this.checkCollision(this.p1Rocket, this.ship03)) {
-            this.clock.elapsed -= 2000;
+            this.clock.elapsed -= 1000;
             this.p1Rocket.reset();
             this.shipExplode(this.ship03, (borderUISize*6 + borderPadding*4));
         }
         if (this.checkCollision(this.p1Rocket, this.ship02)) {
-            this.clock.elapsed -= 2000;
+            this.clock.elapsed -= 1000;
             this.p1Rocket.reset();
             this.shipExplode(this.ship02, (borderUISize*5 + borderPadding*2));
         }
         if (this.checkCollision(this.p1Rocket, this.ship01)) {
-            this.clock.elapsed -= 2000;
+            this.clock.elapsed -= 1000;
             this.p1Rocket.reset();
             this.shipExplode(this.ship01, (borderUISize*4));
         }
         if (this.checkCollision(this.p1Rocket, this.ship04)) {
-            this.clock.elapsed -= 3000;
+            this.clock.elapsed -= 2000;
             this.p1Rocket.reset();
             this.shipExplode(this.ship04, (Phaser.Math.Between(borderUISize*4, borderUISize*6 + borderPadding*4)));
         }
