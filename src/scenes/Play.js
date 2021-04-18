@@ -51,7 +51,7 @@ class Play extends Phaser.Scene {
         this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 
             'spaceship3', 0, 10, 1.5).setOrigin(0,0);
         this.ship04 = new Spaceship(this, game.config.width, Phaser.Math.Between(borderUISize*4, borderUISize*6 + borderPadding*4), 
-            'spaceship4', 0, 80, 8).setOrigin(0,0);
+            'spaceship4', 0, 80, 10).setOrigin(0,0);
 
         // Define our keys
         keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
